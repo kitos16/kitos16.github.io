@@ -1,0 +1,11 @@
+.page-container { padding: 4rem 2rem; max-width: 800px; margin: 0 auto; }
+h2 { font-size: 2.5rem; color: var(--text-main); margin-bottom: 1.5rem; text-align: center; transition: color 0.3s ease; }
+.content { font-size: 1.15rem; color: var(--text-nav); line-height: 1.7; text-align: center; transition: color 0.3s ease; }
+.skills {
+  display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem;
+}
+.badge {
+  background: var(--bg-badge); color: var(--primary); padding: 0.6rem 1.2rem;
+  border-radius: 20px; font-weight: 600; font-size: 0.95rem; border: 1px solid var(--border-badge);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

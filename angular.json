@@ -10,7 +10,14 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
         }
       },
       "root": "",
@@ -29,14 +36,21 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
+          "styles": [
+            "src/styles.scss",
+            {
+              "input": "src/light-theme.scss",
+              "bundleName": "light-theme",
+              "inject": false
+            },
+            {
+              "input": "src/dark-theme.scss",
+              "bundleName": "dark-theme",
+              "inject": false
+            }
+          ],
             "security": {
               "allowedHosts": []
-            },
-            "ssr": {
-              "entry": "src/server.ts"
             }
           },
           "configurations": {

@@ -1,0 +1,21 @@
+.hero {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; height: 80vh; text-align: center; padding: 0 2rem;
+}
+h1 { 
+  font-size: 3.5rem; color: var(--text-main); margin-bottom: 1rem; transition: color 0.3s ease; 
+  span { color: var(--primary); transition: color 0.3s ease; }
+}
+p {
+  font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 600px; transition: color 0.3s ease;
+}
+.btn {
+  padding: 0.8rem 2rem;
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  &:hover { background-color: var(--primary-hover); transform: translateY(-2px); }
+}
