@@ -43,3 +43,34 @@ form { display: flex; flex-direction: column; gap: 1.5rem; text-align: left; }
   &:hover:not(:disabled) { background-color: var(--primary-hover); transform: translateY(-2px); }
   &:disabled { opacity: 0.6; cursor: not-allowed; }
 }
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.social-link {
+  padding: 0.6rem 1.2rem;
+  background: var(--bg-badge);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  &:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+  }
+}
+
+.separator {
+  height: 1px;
+  background: var(--border);
+  margin: 2rem 0;
+}

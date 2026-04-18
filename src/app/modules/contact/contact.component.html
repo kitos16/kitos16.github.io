@@ -2,6 +2,15 @@
   <h2>Contáctame</h2>
   <div class="contact-card" *ngIf="!sent">
     <p>¿Tienes una oportunidad laboral, una idea para un proyecto o simplemente quieres saludar? ¡Escríbeme!</p>
+    
+    <div class="social-links">
+      <a href="https://github.com/kitos16" target="_blank" aria-label="GitHub" class="social-link">GitHub</a>
+      <a href="https://linkedin.com/in/kitos16" target="_blank" aria-label="LinkedIn" class="social-link">LinkedIn</a>
+      <a href="https://twitter.com/kitos16" target="_blank" aria-label="Twitter" class="social-link">Twitter</a>
+    </div>
+    
+    <div class="separator"></div>
+    
     <form (ngSubmit)="sendMessage()" #contactForm="ngForm">
       <div class="form-group">
         <label for="name">Nombre</label>
