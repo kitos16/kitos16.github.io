@@ -2,12 +2,44 @@
   <h2>Sobre mí</h2>
   <div class="content">
     <p>Soy un profesional de la tecnología con sólida experiencia en desarrollo de software. Me encanta mantener un aprendizaje continuo y aplicar buenas prácticas para resolver problemas complejos de forma eficiente.</p>
-    <p>Mis habilidades principales incluyen:</p>
-    <div class="skills">
-      <span class="badge">Angular / TypeScript</span>
-      <span class="badge">HTML5 / CSS3 / SASS</span>
-      <span class="badge">Node.js / Express</span>
-      <span class="badge">Git / GitHub</span>
-    </div>
+    
+    <section class="skills-section">
+      <h3>Habilidades técnicas</h3>
+      <div class="skills-grid">
+        <div class="skill-item" *ngFor="let skill of skills">
+          <div class="skill-info">
+            <span class="skill-name">{{ skill.name }}</span>
+            <span class="skill-percentage">{{ skill.level }}%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" [style.width.%]="skill.level"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline-section">
+      <h3>Experiencia profesional</h3>
+      <div class="timeline">
+        <div class="timeline-item" *ngFor="let exp of experiences">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-period">{{ exp.period }}</span>
+            <h4>{{ exp.title }}</h4>
+            <span class="timeline-company">{{ exp.company }}</span>
+            <p>{{ exp.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-section">
+      <h3>Conéctate conmigo</h3>
+      <div class="social-links">
+        <a *ngFor="let social of socialLinks" [href]="social.url" target="_blank" class="social-link" [attr.aria-label]="social.name">
+          <span class="social-name">{{ social.name }}</span>
+        </a>
+      </div>
+    </section>
   </div>
 </section>

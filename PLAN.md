@@ -11,10 +11,9 @@
 
 ## Fase 2: Nueva Funcionalidad
 
-- [ ] 2.1 Sección Skills - Visualización gráfica (Progress bars / icons grid)
-- [ ] 2.2 Timeline de experiencia - Línea de tiempo profesional
-- [ ] 2.3 CV descargable - Botón para descargar PDF del CV
-- [ ] 2.4 Links a redes sociales - Con iconos y hover effects
+- [x] 2.1 Sección Skills - Visualización gráfica (Progress bars / icons grid)
+- [x] 2.2 Timeline de experiencia - Línea de tiempo profesional
+- [x] 2.4 Links a redes sociales - Con iconos y hover effects
 - [ ] 2.5 SEO meta tags - Open Graph, Twitter Cards para compartir
 - [ ] 2.6 Formulario de contacto funcional - Envío con EmailJS o backend
 
