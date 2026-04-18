@@ -1,16 +1,16 @@
-<nav class="navbar" [class.scrolled]="isScrolled">
-  <div class="logo">Mi Portafolio</div>
-  <button class="menu-toggle" (click)="toggleMenu()" [attr.aria-label]="isMenuOpen ? 'Cerrar menú' : 'Abrir menú'">
+<nav class="navbar" [class.scrolled]="isScrolled" role="navigation" aria-label="Navegación principal">
+  <div class="logo" aria-label="Portafolio">Mi Portafolio</div>
+  <button class="menu-toggle" (click)="toggleMenu()" [attr.aria-label]="isMenuOpen ? 'Cerrar menú' : 'Abrir menú'" [attr.aria-expanded]="isMenuOpen">
     <span class="bar" [class.open]="isMenuOpen"></span>
     <span class="bar" [class.open]="isMenuOpen"></span>
     <span class="bar" [class.open]="isMenuOpen"></span>
   </button>
-  <ul class="nav-links" [class.open]="isMenuOpen">
-    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="isMenuOpen = false">Inicio</a></li>
-    <li><a routerLink="/about" routerLinkActive="active" (click)="isMenuOpen = false">Sobre mí</a></li>
-    <li><a routerLink="/projects" routerLinkActive="active" (click)="isMenuOpen = false">Proyectos</a></li>
-    <li><a routerLink="/contact" routerLinkActive="active" (click)="isMenuOpen = false">Contacto</a></li>
-    <li>
+  <ul class="nav-links" [class.open]="isMenuOpen" role="menubar" [attr.aria-hidden]="!isMenuOpen">
+    <li role="none"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="isMenuOpen = false" role="menuitem">Inicio</a></li>
+    <li role="none"><a routerLink="/about" routerLinkActive="active" (click)="isMenuOpen = false" role="menuitem">Sobre mí</a></li>
+    <li role="none"><a routerLink="/projects" routerLinkActive="active" (click)="isMenuOpen = false" role="menuitem">Proyectos</a></li>
+    <li role="none"><a routerLink="/contact" routerLinkActive="active" (click)="isMenuOpen = false" role="menuitem">Contacto</a></li>
+    <li role="none">
       <button class="theme-toggle" (click)="toggleTheme()" [class.animating]="isAnimating" [attr.aria-label]="isDarkMode ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'">
         <span class="theme-icon" [class.dark]="isDarkMode">☀️</span>
       </button>

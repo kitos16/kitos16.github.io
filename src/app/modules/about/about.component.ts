@@ -12,12 +12,6 @@ interface Experience {
   description: string;
 }
 
-interface Social {
-  name: string;
-  url: string;
-  icon: string;
-}
-
 @Component({
   selector: 'app-about',
   standalone: false,
@@ -53,11 +47,5 @@ export class AboutComponent {
       period: '2018 - 2020',
       description: 'Mantenimiento de sitios web y aplicaciones móviles híbridas.'
     }
-  ];
-
-  socialLinks: Social[] = [
-    { name: 'GitHub', url: 'https://github.com/kitos16', icon: 'GH' },
-    { name: 'LinkedIn', url: 'https://linkedin.com/in/kitos16', icon: 'LI' },
-    { name: 'Twitter', url: 'https://twitter.com/kitos16', icon: 'TW' }
   ];
 }
