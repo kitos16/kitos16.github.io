@@ -8,10 +8,8 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-    permissions:
       pages: write
-      id-token: write
+      contents: write
     
     environment:
       name: github-pages
