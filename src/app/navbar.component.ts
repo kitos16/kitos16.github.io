@@ -10,6 +10,7 @@ export class NavbarComponent implements OnInit {
   isDarkMode = false;
   isMenuOpen = false;
   isScrolled = false;
+  isAnimating = false;
 
   ngOnInit(): void {
     const savedTheme = localStorage.getItem('theme') || 'light';
@@ -26,6 +27,9 @@ export class NavbarComponent implements OnInit {
   }
 
   toggleTheme(): void {
+    if (this.isAnimating) return;
+    this.isAnimating = true;
+    
     this.isDarkMode = !this.isDarkMode;
     const theme = this.isDarkMode ? 'dark' : 'light';
     localStorage.setItem('theme', theme);
@@ -34,5 +38,9 @@ export class NavbarComponent implements OnInit {
     if (themeLink) {
       themeLink.href = `${theme}-theme.css`;
     }
+
+    setTimeout(() => {
+      this.isAnimating = false;
+    }, 400);
   }
 }

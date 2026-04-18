@@ -4,9 +4,9 @@
 
 - [ ] 1.1 Animaciones de página - Transiciones smooth entre rutas (Angular animations)
 - [x] 1.2 Skeleton loaders - Loading states mientras cargan datos
-- [ ] 1.3 Mejorar navbar - Sticky con backdrop blur, mobile menu mejorado
-- [ ] 1.4 Efectos hover en proyectos - Cards con zoom/overlay informativo
-- [ ] 1.5 Theme toggle animado - Icono con transición states
+- [x] 1.3 Mejorar navbar - Sticky con backdrop blur, mobile menu mejorado
+- [x] 1.4 Efectos hover en proyectos - Cards con zoom/overlay informativo
+- [x] 1.5 Theme toggle animado - Icono con transición states
 - [ ] 1.6 Optimizar responsive - breakpoints para tablet/mobile
 
 ## Fase 2: Nueva Funcionalidad

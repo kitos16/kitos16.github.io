@@ -11,8 +11,8 @@
     <li><a routerLink="/projects" routerLinkActive="active" (click)="isMenuOpen = false">Proyectos</a></li>
     <li><a routerLink="/contact" routerLinkActive="active" (click)="isMenuOpen = false">Contacto</a></li>
     <li>
-      <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="isDarkMode ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'">
-        {{ isDarkMode ? '☀️' : '🌙' }}
+      <button class="theme-toggle" (click)="toggleTheme()" [class.animating]="isAnimating" [attr.aria-label]="isDarkMode ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'">
+        <span class="theme-icon" [class.dark]="isDarkMode">☀️</span>
       </button>
     </li>
   </ul>
