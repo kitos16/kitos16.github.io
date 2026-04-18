@@ -1,6 +1,14 @@
-.page-container { padding: 4rem 2rem; max-width: 800px; margin: 0 auto; }
-h2 { font-size: 2.5rem; color: var(--text-main); margin-bottom: 1.5rem; text-align: center; transition: color 0.3s ease; }
-.content { font-size: 1.15rem; color: var(--text-nav); line-height: 1.7; text-align: center; transition: color 0.3s ease; }
+.page-container { padding: 4rem 2rem; max-width: 800px; margin: 0 auto; 
+  @media (max-width: 768px) { padding: 3rem 1.5rem; }
+  @media (max-width: 480px) { padding: 2rem 1rem; }
+}
+h2 { font-size: 2.5rem; color: var(--text-main); margin-bottom: 1.5rem; text-align: center; transition: color 0.3s ease; 
+  @media (max-width: 768px) { font-size: 2rem; }
+  @media (max-width: 480px) { font-size: 1.75rem; }
+}
+.content { font-size: 1.15rem; color: var(--text-nav); line-height: 1.7; text-align: center; transition: color 0.3s ease; 
+  @media (max-width: 480px) { font-size: 1rem; }
+}
 .skills {
   display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem;
 }
