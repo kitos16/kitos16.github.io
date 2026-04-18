@@ -3,7 +3,7 @@
 ## Fase 1: UX/UI y Diseño
 
 - [ ] 1.1 Animaciones de página - Transiciones smooth entre rutas (Angular animations)
-- [ ] 1.2 Skeleton loaders - Loading states mientras cargan datos
+- [x] 1.2 Skeleton loaders - Loading states mientras cargan datos
 - [ ] 1.3 Mejorar navbar - Sticky con backdrop blur, mobile menu mejorado
 - [ ] 1.4 Efectos hover en proyectos - Cards con zoom/overlay informativo
 - [ ] 1.5 Theme toggle animado - Icono con transición states
