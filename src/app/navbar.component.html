@@ -1,10 +1,15 @@
-<nav class="navbar">
+<nav class="navbar" [class.scrolled]="isScrolled">
   <div class="logo">Mi Portafolio</div>
-  <ul class="nav-links">
-    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a></li>
-    <li><a routerLink="/about" routerLinkActive="active">Sobre mí</a></li>
-    <li><a routerLink="/projects" routerLinkActive="active">Proyectos</a></li>
-    <li><a routerLink="/contact" routerLinkActive="active">Contacto</a></li>
+  <button class="menu-toggle" (click)="toggleMenu()" [attr.aria-label]="isMenuOpen ? 'Cerrar menú' : 'Abrir menú'">
+    <span class="bar" [class.open]="isMenuOpen"></span>
+    <span class="bar" [class.open]="isMenuOpen"></span>
+    <span class="bar" [class.open]="isMenuOpen"></span>
+  </button>
+  <ul class="nav-links" [class.open]="isMenuOpen">
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="isMenuOpen = false">Inicio</a></li>
+    <li><a routerLink="/about" routerLinkActive="active" (click)="isMenuOpen = false">Sobre mí</a></li>
+    <li><a routerLink="/projects" routerLinkActive="active" (click)="isMenuOpen = false">Proyectos</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active" (click)="isMenuOpen = false">Contacto</a></li>
     <li>
       <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="isDarkMode ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'">
         {{ isDarkMode ? '☀️' : '🌙' }}
