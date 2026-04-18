@@ -24,3 +24,7 @@
 - [ ] 3.3 Angular 19+ - Actualizar a última versión estable
 - [ ] 3.4 Service Worker - PWA capabilities (offline mode)
 - [ ] 3.5 Accessibility - ARIA labels, keyboard navigation, contrast
+
+## Fase 4: Refactorización de Arquitectura
+
+- [x] 4.1 Reorganizar componentes en carpetas/modules - Crear shared/, about/, projects/, contact/ módulos
