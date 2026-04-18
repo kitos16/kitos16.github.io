@@ -8,6 +8,7 @@ import { HomeComponent } from './home.component';
 import { AboutComponent } from './about.component';
 import { ProjectsComponent } from './projects.component';
 import { ContactComponent } from './contact.component';
+import { SkeletonComponent } from './skeleton.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ContactComponent } from './contact.component';
     HomeComponent,
     AboutComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    SkeletonComponent
   ],
   imports: [BrowserModule, RouterModule.forRoot(routes)],
   bootstrap: [AppComponent]
