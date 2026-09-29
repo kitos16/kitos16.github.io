@@ -1,0 +1,51 @@
+<section class="demo-container">
+  <h2>gear-sketch Demo</h2>
+  <p class="demo-description">Canvas drawing app with pressure-sensitive strokes, brush/eraser tools, and undo/redo</p>
+
+  <div class="toolbar">
+    <div class="tool-group">
+      <button
+        class="tool-btn"
+        [class.active]="tool === 'brush'"
+        (click)="tool = 'brush'"
+      >
+        Brush
+      </button>
+      <button
+        class="tool-btn"
+        [class.active]="tool === 'eraser'"
+        (click)="tool = 'eraser'"
+      >
+        Eraser
+      </button>
+    </div>
+
+    <div class="tool-group">
+      <button class="tool-btn" (click)="undo()" [disabled]="!canUndo">
+        Undo
+      </button>
+      <button class="tool-btn" (click)="redo()" [disabled]="!canRedo">
+        Redo
+      </button>
+      <button class="tool-btn" (click)="clear()">
+        Clear
+      </button>
+    </div>
+
+    <div class="tool-group">
+      <label>
+        Size: {{ baseWidth }}px
+        <input type="range" min="1" max="20" [(ngModel)]="baseWidth" />
+      </label>
+    </div>
+  </div>
+
+  <div class="canvas-wrapper">
+    <canvas #canvas aria-label="Drawing canvas" role="img"></canvas>
+  </div>
+
+  <div class="demo-actions">
+    <a href="https://github.com/kitos16/gear-sketch" target="_blank" class="btn">Ver código</a>
+    <a routerLink="/projects" class="btn btn-secondary">Volver a proyectos</a>
+  </div>
+</section>

@@ -8,6 +8,7 @@ import { HomeModule } from './modules/home/home.module';
 import { AboutModule } from './modules/about/about.module';
 import { ProjectsModule } from './modules/projects/projects.module';
 import { ContactModule } from './modules/contact/contact.module';
+import { DemosModule } from './modules/demos/demos.module';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
@@ -22,6 +23,7 @@ import { SharedModule } from './shared/shared.module';
     AboutModule,
     ProjectsModule,
     ContactModule,
+    DemosModule,
     SharedModule
   ],
   bootstrap: [AppComponent]

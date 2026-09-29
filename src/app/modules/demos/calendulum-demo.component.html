@@ -1,0 +1,42 @@
+<section class="demo-container">
+  <h2>calendulum Demo</h2>
+  <p class="demo-description">Reusable calendar suite for Angular 17+ with signals and SCSS theming</p>
+
+  <div class="calendar">
+    <div class="calendar-header">
+      <button class="nav-btn" (click)="prevMonth()">&larr;</button>
+      <h3>{{ monthName }}</h3>
+      <button class="nav-btn" (click)="nextMonth()">&rarr;</button>
+    </div>
+
+    <div class="calendar-grid">
+      <div class="weekday">Sun</div>
+      <div class="weekday">Mon</div>
+      <div class="weekday">Tue</div>
+      <div class="weekday">Wed</div>
+      <div class="weekday">Thu</div>
+      <div class="weekday">Fri</div>
+      <div class="weekday">Sat</div>
+
+      <div
+        *ngFor="let day of calendarDays"
+        class="day"
+        [class.empty]="!day"
+        [class.today]="day && isToday(day)"
+        [class.selected]="day && isSelected(day)"
+        (click)="day && selectDay(day)"
+      >
+        {{ day || '' }}
+      </div>
+    </div>
+  </div>
+
+  <p class="selected-info" *ngIf="selectedDate">
+    Selected: {{ selectedDate.toLocaleDateString() }}
+  </p>
+
+  <div class="demo-actions">
+    <a href="https://github.com/kitos16/calendulum" target="_blank" class="btn">Ver código</a>
+    <a routerLink="/projects" class="btn btn-secondary">Volver a proyectos</a>
+  </div>
+</section>

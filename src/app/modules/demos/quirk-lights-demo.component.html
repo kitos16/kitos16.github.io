@@ -1,0 +1,66 @@
+<section class="demo-container">
+  <h2>quirk-lights Demo</h2>
+  <p class="demo-description">Holiday lights overlay — SVG bulbs on a sinusoidal cable with illumination modes</p>
+
+  <div class="controls">
+    <label>
+      Mode
+      <select [(ngModel)]="mode" (change)="renderBulbs()">
+        <option value="cascade">Cascade</option>
+        <option value="pulse">Pulse</option>
+        <option value="alternating">Alternating</option>
+        <option value="wave">Wave</option>
+        <option value="random">Random</option>
+        <option value="color-cycle">Color Cycle</option>
+      </select>
+    </label>
+    <label>
+      Variant
+      <select [(ngModel)]="variant" (change)="renderBulbs()">
+        <option value="classic">Classic</option>
+        <option value="neon">Neon</option>
+        <option value="plus-ultra">Plus Ultra</option>
+      </select>
+    </label>
+    <label>
+      Speed
+      <select [(ngModel)]="speed">
+        <option value="slow">Slow</option>
+        <option value="normal">Normal</option>
+        <option value="fast">Fast</option>
+      </select>
+    </label>
+    <label>
+      Density: {{ density }}
+      <input type="range" min="2" max="10" [(ngModel)]="density" (change)="renderBulbs()" />
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox" [(ngModel)]="interactive" />
+      Interactive (click bulbs)
+    </label>
+  </div>
+
+  <div class="lights-stage" [attr.data-variant]="variant" [attr.data-speed]="mode" [attr.data-mode]="mode" [style.--duration]="duration">
+    <svg class="cable" viewBox="0 0 1024 26" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path [attr.d]="cablePath" fill="none" stroke="#12341f" stroke-width="2.4" stroke-linecap="round"/>
+      <path [attr.d]="cablePath" fill="none" stroke="#2a6b45" stroke-width="0.7" stroke-linecap="round" transform="translate(0,-0.5)" opacity="0.7"/>
+    </svg>
+    <div class="bulbs-row">
+      <span
+        *ngFor="let bulb of bulbs; let i = index"
+        class="bulb"
+        [class.broken]="bulb.broken"
+        [style.--color]="bulb.color"
+        [style.animation-delay]="bulb.delay"
+        [style.margin-top.px]="bulb.marginTop"
+        (click)="toggleBulb(i)"
+        [innerHTML]="bulb.svg"
+      ></span>
+    </div>
+  </div>
+
+  <div class="demo-actions">
+    <a href="https://github.com/kitos16/quirk-lights" target="_blank" class="btn">Ver código</a>
+    <a routerLink="/projects" class="btn btn-secondary">Volver a proyectos</a>
+  </div>
+</section>
